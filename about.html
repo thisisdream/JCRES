@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet Linda Garcia, Broker/Owner of Jones and Company Real Estate. Learn about our Silicon Valley expertise and commitment to exceptional real estate service.">
+    <meta name="keywords" content="Linda Garcia realtor, Jones and Company Real Estate, Silicon Valley real estate broker, about us">
+    <meta property="og:title" content="About Us - Jones and Company Real Estate">
+    <meta property="og:description" content="Meet our team and learn about our commitment to exceptional real estate service in Silicon Valley.">
+    <meta property="og:type" content="website">
+    <title>About Us | Jones and Company Real Estate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .about-hero {
+            height: 60vh;
+            min-height: 400px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-red) 100%);
+            background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-top: 80px;
+        }
+        
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(139, 26, 30, 0.8);
+        }
+        
+        .about-hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+        }
+        
+        .about-hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+        }
+        
+        .about-hero p {
+            font-size: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .about-content {
+            padding: 100px 0;
+        }
+        
+        .bio-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        
+        .bio-image {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: var(--secondary-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .bio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .bio-text h2 {
+            font-size: 42px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .bio-text .title {
+            font-size: 18px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+        
+        .bio-text p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+        
+        .credentials {
+            margin-top: 30px;
+            padding: 30px;
+            background: var(--bg-light);
+            border-left: 4px solid var(--primary-color);
+            border-radius: 4px;
+        }
+        
+        .credentials h3 {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .credentials ul {
+            list-style: none;
+        }
+        
+        .credentials li {
+            padding: 8px 0;
+            font-size: 16px;
+            color: var(--text-dark);
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .credentials li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .values-section {
+            background: var(--bg-light);
+            padding: 80px 0;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: white;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 32px;
+        }
+        
+        .value-card h3 {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .value-card p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-light);
+        }
+        
+        .story-section {
+            padding: 80px 0;
+        }
+        
+        .story-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .story-content p {
+            font-size: 18px;
+            line-height: 1.9;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-red));
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            color: var(--secondary-color);
+            margin-bottom: 40px;
+        }
+        
+        @media (max-width: 968px) {
+            .bio-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .about-hero h1 {
+                font-size: 40px;
+            }
+            
+            .bio-text h2 {
+                font-size: 32px;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .about-hero h1 {
+                font-size: 32px;
+            }
+            
+            .about-hero p {
+                font-size: 16px;
+            }
+            
+            .cta-section h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>Jones <span>&</span> Company</h1>
+                <p>Real Estate</p>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="https://www.zillow.com/homes/recently_sold/?category=SEMANTIC&searchQueryState=%7B%22isMapVisible%22%3Atrue%2C%22mapBounds%22%3A%7B%22north%22%3A37.760839471389296%2C%22south%22%3A37.309454843203795%2C%22east%22%3A-121.79586913607453%2C%22west%22%3A-122.46740844271515%7D%2C%22filterState%22%3A%7B%22sort%22%3A%7B%22value%22%3A%22globalrelevanceex%22%7D%2C%22fsba%22%3A%7B%22value%22%3Afalse%7D%2C%22fsbo%22%3A%7B%22value%22%3Afalse%7D%2C%22nc%22%3A%7B%22value%22%3Afalse%7D%2C%22cmsn%22%3A%7B%22value%22%3Afalse%7D%2C%22auc%22%3A%7B%22value%22%3Afalse%7D%2C%22fore%22%3A%7B%22value%22%3Afalse%7D%2C%22rs%22%3A%7B%22value%22%3Atrue%7D%7D%2C%22isListVisible%22%3Atrue%2C%22mapZoom%22%3A11%7D" target="_blank" rel="noopener">Search Properties</a></li>
+                <li><a href="index.html#contact" class="btn-contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <h1>About Us</h1>
+            <p>Meet the people behind Jones and Company Real Estate</p>
+        </div>
+    </section>
+
+    <!-- Bio Section -->
+    <section class="about-content">
+        <div class="container">
+            <div class="bio-section">
+                <div class="bio-image">
+                    <!-- Placeholder image - replace with actual photo -->
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80" alt="Linda Garcia - Broker/Owner">
+                </div>
+                <div class="bio-text">
+                    <h2>Linda Garcia</h2>
+                    <p class="title">Broker / Owner</p>
+                    <p>
+                        Linda Garcia is the driving force behind Jones and Company Real Estate, bringing over [XX] years of exceptional experience in Silicon Valley's dynamic real estate market. Her deep understanding of the local landscape, combined with an unwavering commitment to client success, has established her as one of the region's most trusted real estate professionals.
+                    </p>
+                    <p>
+                        With a background in [relevant experience], Linda brings a unique perspective to every transaction. She understands that buying or selling a home is one of life's most significant decisions, and she approaches each client relationship with the dedication, integrity, and expertise it deserves.
+                    </p>
+                    <p>
+                        Linda's approach is simple: listen to her clients' needs, provide honest guidance, and work tirelessly to exceed expectations. Her track record speaks for itself, with countless successful transactions and clients who return for her services time and again.
+                    </p>
+                    
+                    <div class="credentials">
+                        <h3>Professional Credentials & Expertise</h3>
+                        <ul>
+                            <li>California Real Estate Broker License [DRE #XXXXXXXX]</li>
+                            <li>[XX]+ Years in Silicon Valley Real Estate</li>
+                            <li>Certified Negotiation Expert</li>
+                            <li>Member, California Association of Realtors</li>
+                            <li>Luxury Home Marketing Specialist</li>
+                            <li>Investment Property Consultant</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Values</h2>
+                <div class="divider"></div>
+                <p>The principles that guide everything we do</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Integrity</h3>
+                    <p>We operate with complete honesty and transparency in every interaction, building trust through ethical practices.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">⭐</div>
+                    <h3>Excellence</h3>
+                    <p>We strive for excellence in every aspect of our service, from market analysis to closing day and beyond.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💼</div>
+                    <h3>Professionalism</h3>
+                    <p>Our team maintains the highest standards of professionalism, expertise, and client service.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>Results-Driven</h3>
+                    <p>We focus on delivering measurable results that align with and exceed our clients' goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Story</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="story-content">
+                <p>
+                    Jones and Company Real Estate was founded with a simple but powerful vision: to transform the real estate experience in Silicon Valley by putting clients first and delivering exceptional results through personalized service.
+                </p>
+                <p>
+                    What began as a passion for helping people find their dream homes has grown into a full-service brokerage known for its expertise, integrity, and commitment to excellence. We've had the privilege of helping hundreds of families and investors achieve their real estate goals in one of the world's most competitive markets.
+                </p>
+                <p>
+                    Our success is built on relationships. We don't just complete transactions—we become trusted advisors and partners in our clients' real estate journeys. Many of our clients have worked with us multiple times, and referrals from satisfied clients remain our greatest source of new business.
+                </p>
+                <p>
+                    Today, Jones and Company Real Estate continues to set the standard for real estate excellence in Silicon Valley. As the market evolves, our commitment remains unchanged: to provide unparalleled service, expert guidance, and outstanding results for every client we serve.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Work Together?</h2>
+            <p>Let's discuss your real estate goals and how we can help you achieve them.</p>
+            <div class="hero-cta">
+                <a href="index.html#contact" class="btn btn-primary">Contact Linda</a>
+                <a href="index.html#services" class="btn btn-secondary">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Jones & Company</h3>
+                    <p class="footer-tagline">Real Estate</p>
+                    <p>Your trusted partner in Silicon Valley real estate since establishment.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://www.zillow.com/homes/recently_sold/?category=SEMANTIC&searchQueryState=%7B%22isMapVisible%22%3Atrue%2C%22mapBounds%22%3A%7B%22north%22%3A37.760839471389296%2C%22south%22%3A37.309454843203795%2C%22east%22%3A-121.79586913607453%2C%22west%22%3A-122.46740844271515%7D%2C%22filterState%22%3A%7B%22sort%22%3A%7B%22value%22%3A%22globalrelevanceex%22%7D%2C%22fsba%22%3A%7B%22value%22%3Afalse%7D%2C%22fsbo%22%3A%7B%22value%22%3Afalse%7D%2C%22nc%22%3A%7B%22value%22%3Afalse%7D%2C%22cmsn%22%3A%7B%22value%22%3Afalse%7D%2C%22auc%22%3A%7B%22value%22%3Afalse%7D%2C%22fore%22%3A%7B%22value%22%3Afalse%7D%2C%22rs%22%3A%7B%22value%22%3Atrue%7D%7D%2C%22isListVisible%22%3Atrue%2C%22mapZoom%22%3A11%7D" target="_blank" rel="noopener">Search Properties</a></li>
+                        <li><a href="index.html#services">Buyer Services</a></li>
+                        <li><a href="index.html#services">Seller Services</a></li>
+                        <li><a href="index.html#services">Investment Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Silicon Valley, California</p>
+                    <p><a href="mailto:lindavon@msn.com">lindavon@msn.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Jones and Company Real Estate. All rights reserved.</p>
+                <p>DRE License: [License Number]</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
