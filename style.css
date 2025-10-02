@@ -2,7 +2,6 @@
 :root {
     --primary-color: #8B1A1E;
     --secondary-color: #28282B;
-    --accent-gold: #D4C4A3;
     --dark-red: #6B1416;
     --dark-gray: #1a1a1c;
     --text-dark: #2C2C2C;
@@ -165,11 +164,22 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #000;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: url('https://raw.githubusercontent.com/thisisdream/JCRES/main/images/JCRES%20Hero%20Image.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    overflow: hidden;
+    z-index: 0;
 }
 
 .hero-overlay {
@@ -178,7 +188,8 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(40, 40, 43, 0.35);
+    background: rgba(40, 40, 43, 0.25);
+    z-index: 1;
 }
 
 .hero-content {
@@ -212,7 +223,7 @@ a {
 .hero-subtitle {
     font-size: 24px;
     margin-bottom: 40px;
-    color: var(--accent-gold);
+    color: var(--white);
     font-weight: 300;
 }
 
@@ -235,14 +246,14 @@ a {
 }
 
 .btn-primary {
-    background: var(--accent-gold);
+    background: var(--white);
     color: var(--primary-color);
 }
 
 .btn-primary:hover {
-    background: #E5D9C0;
+    background: var(--bg-light);
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(212, 196, 163, 0.4);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
 }
 
 .btn-secondary {
@@ -277,7 +288,7 @@ a {
 .scroll-indicator {
     width: 2px;
     height: 40px;
-    background: var(--accent-gold);
+    background: var(--white);
     margin: 10px auto 0;
     animation: scrollDown 2s infinite;
 }
@@ -395,7 +406,7 @@ section {
 .service-icon {
     width: 70px;
     height: 70px;
-    background: var(--accent-gold);
+    background: var(--primary-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -410,7 +421,7 @@ section {
 .service-icon svg {
     width: 35px;
     height: 35px;
-    stroke: var(--primary-color);
+    stroke: var(--white);
 }
 
 .service-card.featured .service-icon svg {
@@ -479,7 +490,7 @@ section {
 }
 
 .differentiators .divider {
-    background: var(--accent-gold);
+    background: var(--primary-color);
 }
 
 .diff-grid {
@@ -497,9 +508,9 @@ section {
     font-size: 48px;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    color: var(--accent-gold);
+    color: var(--primary-color);
     margin-bottom: 20px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .diff-item h3 {
@@ -511,7 +522,7 @@ section {
 .diff-item p {
     font-size: 16px;
     line-height: 1.7;
-    color: #E5D9C0;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 /* ==================== Promise Section ==================== */
@@ -622,6 +633,14 @@ section {
     border: none;
     cursor: pointer;
     font-size: 18px;
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-submit:hover {
+    background: var(--dark-red);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 26, 30, 0.3);
 }
 
 .form-status {
@@ -697,7 +716,7 @@ section {
 
 .footer-brand h3 {
     font-size: 28px;
-    color: var(--accent-gold);
+    color: var(--primary-color);
     margin-bottom: 5px;
 }
 
@@ -717,7 +736,7 @@ section {
 
 .footer-links h4 {
     font-size: 18px;
-    color: var(--accent-gold);
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
@@ -735,12 +754,12 @@ section {
 }
 
 .footer-links a:hover {
-    color: var(--accent-gold);
+    color: var(--primary-color);
 }
 
 .footer-contact h4 {
     font-size: 18px;
-    color: var(--accent-gold);
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
@@ -752,7 +771,7 @@ section {
 }
 
 .footer-contact a {
-    color: var(--accent-gold);
+    color: var(--primary-color);
 }
 
 .footer-contact a:hover {
