@@ -99,7 +99,7 @@ contactForm.addEventListener('submit', async (e) => {
         `Message:\n${formData.message}`
     );
     
-    const mailtoLink = `mailto:lindavon@msn.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:JCRES@email.com?subject=${subject}&body=${body}`;
     
     // Open default email client
     window.location.href = mailtoLink;
