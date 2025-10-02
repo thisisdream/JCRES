@@ -238,25 +238,6 @@ const createScrollTopBtn = () => {
 
 createScrollTopBtn();
 
-// ==================== Parallax Effect ====================
-window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY;
-    const hero = document.querySelector('.hero');
-    const promise = document.querySelector('.promise');
-    
-    if (hero && scrolled < window.innerHeight) {
-        hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
-    }
-    
-    if (promise) {
-        const promiseTop = promise.offsetTop;
-        const promiseScroll = scrolled - promiseTop;
-        if (promiseScroll > -window.innerHeight && promiseScroll < promise.offsetHeight) {
-            promise.style.backgroundPositionY = promiseScroll * 0.3 + 'px';
-        }
-    }
-});
-
 // ==================== Service Card Hover Effect ====================
 const serviceCards = document.querySelectorAll('.service-card');
 
