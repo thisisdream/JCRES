@@ -17,10 +17,7 @@
         .about-hero {
             height: 60vh;
             min-height: 400px;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-red) 100%);
-            background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80');
-            background-size: cover;
-            background-position: center;
+            background: #000;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -35,7 +32,21 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(139, 26, 30, 0.8);
+            background-image: url('https://raw.githubusercontent.com/thisisdream/JCRES/main/images/about-us-hero.png');
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+        
+        .about-hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(40, 40, 43, 0.25);
+            z-index: 1;
         }
         
         .about-hero-content {
@@ -298,84 +309,15 @@
                     <h2>Linda Garcia</h2>
                     <p class="title">Broker / Owner</p>
                     <p>
-                        Linda Garcia is the driving force behind JCRES, bringing over [XX] years of exceptional experience in Silicon Valley's dynamic real estate market. Her deep understanding of the local landscape, combined with an unwavering commitment to client success, has established her as one of the region's most trusted real estate professionals.
+                        Linda Garcia is the driving force behind <strong>Jones & Company Realtors (JCRES)</strong>, bringing <strong>nearly two decades</strong> of exceptional experience in Silicon Valley's dynamic real estate market. As a <strong>second-generation broker</strong> and a lifelong resident, her deep understanding of the local landscape, combined with an unwavering commitment to client success, has established her as one of the region's most trusted real estate professionals.
                     </p>
                     <p>
-                        With a background in [relevant experience], Linda brings a unique perspective to every transaction. She understands that buying or selling a home is one of life's most significant decisions, and she approaches each client relationship with the dedication, integrity, and expertise it deserves.
+                        With a background that includes expertise in <strong>Commercial and Residential sales, Property Management, and Lending</strong>, Linda brings a unique and comprehensive perspective to every transaction. She understands that buying or selling a home is one of life's most significant decisions, and she approaches each client relationship with the dedication, integrity, and expertise it deserves.
                     </p>
                     <p>
-                        Linda's approach is simple: listen to her clients' needs, provide honest guidance, and work tirelessly to exceed expectations. Her track record speaks for itself, with countless successful transactions and clients who return for her services time and again.
+                        Linda's approach is simple: listen to her clients' needs, provide honest guidance, and work tirelessly to exceed expectations. Her track record speaks for itself, with countless successful transactions and clients who return for her services time and again. She is more than just a broker; she is a deeply invested community member committed to the success and well-being of the Silicon Valley area.
                     </p>
-                    
-                    <div class="credentials">
-                        <h3>Professional Credentials & Expertise</h3>
-                        <ul>
-                            <li>California Real Estate Broker License [DRE #XXXXXXXX]</li>
-                            <li>[XX]+ Years in Silicon Valley Real Estate</li>
-                            <li>Certified Negotiation Expert</li>
-                            <li>Member, California Association of Realtors</li>
-                            <li>Luxury Home Marketing Specialist</li>
-                            <li>Investment Property Consultant</li>
-                        </ul>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Values Section -->
-    <section class="values-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Core Values</h2>
-                <div class="divider"></div>
-                <p>The principles that guide everything we do</p>
-            </div>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">🤝</div>
-                    <h3>Integrity</h3>
-                    <p>We operate with complete honesty and transparency in every interaction, building trust through ethical practices.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">⭐</div>
-                    <h3>Excellence</h3>
-                    <p>We strive for excellence in every aspect of our service, from market analysis to closing day and beyond.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">💼</div>
-                    <h3>Professionalism</h3>
-                    <p>Our team maintains the highest standards of professionalism, expertise, and client service.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">🎯</div>
-                    <h3>Results-Driven</h3>
-                    <p>We focus on delivering measurable results that align with and exceed our clients' goals.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Story Section -->
-    <section class="story-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Story</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="story-content">
-                <p>
-                    JCRES was founded with a simple but powerful vision: to transform the real estate experience in Silicon Valley by putting clients first and delivering exceptional results through personalized service.
-                </p>
-                <p>
-                    What began as a passion for helping people find their dream homes has grown into a full-service brokerage known for its expertise, integrity, and commitment to excellence. We've had the privilege of helping hundreds of families and investors achieve their real estate goals in one of the world's most competitive markets.
-                </p>
-                <p>
-                    Our success is built on relationships. We don't just complete transactions—we become trusted advisors and partners in our clients' real estate journeys. Many of our clients have worked with us multiple times, and referrals from satisfied clients remain our greatest source of new business.
-                </p>
-                <p>
-                    Today, JCRES continues to set the standard for real estate excellence in Silicon Valley. As the market evolves, our commitment remains unchanged: to provide unparalleled service, expert guidance, and outstanding results for every client we serve.
-                </p>
             </div>
         </div>
     </section>
