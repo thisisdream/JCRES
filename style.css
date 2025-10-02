@@ -1,9 +1,10 @@
 /* ==================== Root Variables ==================== */
 :root {
     --primary-color: #8B1A1E;
-    --secondary-color: #D4C4A3;
+    --secondary-color: #28282B;
+    --accent-gold: #D4C4A3;
     --dark-red: #6B1416;
-    --light-gold: #E5D9C0;
+    --dark-gray: #1a1a1c;
     --text-dark: #2C2C2C;
     --text-light: #666666;
     --bg-light: #FAFAFA;
@@ -76,22 +77,14 @@ a {
     padding: 20px 24px;
 }
 
-.logo h1 {
-    font-size: 28px;
-    color: var(--primary-color);
-    margin-bottom: 0;
+.logo {
+    display: flex;
+    align-items: center;
 }
 
-.logo span {
-    color: var(--secondary-color);
-}
-
-.logo p {
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--text-light);
-    margin-top: -5px;
+.logo-image {
+    height: 50px;
+    width: auto;
 }
 
 .nav-links {
@@ -171,8 +164,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-red) 100%);
-    background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80');
+    background-image: url('https://raw.githubusercontent.com/thisisdream/JCRES/main/images/JCRES%20Hero%20Image.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -185,7 +177,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(139, 26, 30, 0.85) 0%, rgba(107, 20, 22, 0.75) 100%);
+    background: rgba(40, 40, 43, 0.35);
 }
 
 .hero-content {
@@ -219,7 +211,7 @@ a {
 .hero-subtitle {
     font-size: 24px;
     margin-bottom: 40px;
-    color: var(--secondary-color);
+    color: var(--accent-gold);
     font-weight: 300;
 }
 
@@ -242,12 +234,12 @@ a {
 }
 
 .btn-primary {
-    background: var(--secondary-color);
+    background: var(--accent-gold);
     color: var(--primary-color);
 }
 
 .btn-primary:hover {
-    background: var(--light-gold);
+    background: #E5D9C0;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(212, 196, 163, 0.4);
 }
@@ -284,7 +276,7 @@ a {
 .scroll-indicator {
     width: 2px;
     height: 40px;
-    background: var(--secondary-color);
+    background: var(--accent-gold);
     margin: 10px auto 0;
     animation: scrollDown 2s infinite;
 }
@@ -402,7 +394,7 @@ section {
 .service-icon {
     width: 70px;
     height: 70px;
-    background: var(--secondary-color);
+    background: var(--accent-gold);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -442,7 +434,7 @@ section {
 }
 
 .service-card.featured p {
-    color: var(--light-gold);
+    color: #E5D9C0;
 }
 
 .service-features {
@@ -471,12 +463,12 @@ section {
 }
 
 .service-card.featured .service-features li::before {
-    color: var(--secondary-color);
+    color: var(--accent-gold);
 }
 
 /* ==================== Differentiators Section ==================== */
 .differentiators {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-red) 100%);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--dark-gray) 100%);
     color: var(--white);
 }
 
@@ -486,7 +478,7 @@ section {
 }
 
 .differentiators .divider {
-    background: var(--secondary-color);
+    background: var(--accent-gold);
 }
 
 .diff-grid {
@@ -504,7 +496,7 @@ section {
     font-size: 48px;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    color: var(--secondary-color);
+    color: var(--accent-gold);
     margin-bottom: 20px;
     opacity: 0.8;
 }
@@ -518,7 +510,7 @@ section {
 .diff-item p {
     font-size: 16px;
     line-height: 1.7;
-    color: var(--light-gold);
+    color: #E5D9C0;
 }
 
 /* ==================== Promise Section ==================== */
@@ -704,7 +696,7 @@ section {
 
 .footer-brand h3 {
     font-size: 28px;
-    color: var(--secondary-color);
+    color: var(--accent-gold);
     margin-bottom: 5px;
 }
 
@@ -724,7 +716,7 @@ section {
 
 .footer-links h4 {
     font-size: 18px;
-    color: var(--secondary-color);
+    color: var(--accent-gold);
     margin-bottom: 20px;
 }
 
@@ -742,12 +734,12 @@ section {
 }
 
 .footer-links a:hover {
-    color: var(--secondary-color);
+    color: var(--accent-gold);
 }
 
 .footer-contact h4 {
     font-size: 18px;
-    color: var(--secondary-color);
+    color: var(--accent-gold);
     margin-bottom: 20px;
 }
 
@@ -759,7 +751,7 @@ section {
 }
 
 .footer-contact a {
-    color: var(--secondary-color);
+    color: var(--accent-gold);
 }
 
 .footer-contact a:hover {
