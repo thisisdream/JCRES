@@ -45,6 +45,24 @@ a {
     text-decoration: none;
     color: inherit;
     transition: var(--transition);
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+input, select, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Improve touch targets for mobile */
+@media (max-width: 768px) {
+    a, button, input, select {
+        min-height: 44px;
+    }
 }
 
 .container {
@@ -177,8 +195,7 @@ a {
     bottom: 0;
     background-image: url('https://raw.githubusercontent.com/thisisdream/JCRES/main/images/JCRES%20Hero%20Image.png');
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-position: center center;
     z-index: 0;
 }
 
@@ -531,7 +548,6 @@ section {
     background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     position: relative;
 }
 
@@ -716,7 +732,7 @@ section {
 
 .footer-brand h3 {
     font-size: 28px;
-    color: var(--primary-color);
+    color: #AAAAAA;
     margin-bottom: 5px;
 }
 
@@ -736,7 +752,7 @@ section {
 
 .footer-links h4 {
     font-size: 18px;
-    color: var(--primary-color);
+    color: #AAAAAA;
     margin-bottom: 20px;
 }
 
@@ -754,12 +770,12 @@ section {
 }
 
 .footer-links a:hover {
-    color: var(--primary-color);
+    color: var(--white);
 }
 
 .footer-contact h4 {
     font-size: 18px;
-    color: var(--primary-color);
+    color: #AAAAAA;
     margin-bottom: 20px;
 }
 
@@ -771,7 +787,11 @@ section {
 }
 
 .footer-contact a {
-    color: var(--primary-color);
+    color: #AAAAAA;
+}
+
+.footer-contact a:hover {
+    color: var(--white);
 }
 
 .footer-contact a:hover {
@@ -794,10 +814,10 @@ section {
 @media (max-width: 968px) {
     .nav-links {
         position: fixed;
-        top: 80px;
+        top: 70px;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 80px);
+        height: calc(100vh - 70px);
         background: var(--white);
         flex-direction: column;
         justify-content: flex-start;
@@ -827,46 +847,26 @@ section {
         transform: rotate(-45deg) translate(7px, -7px);
     }
 
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero::before {
+        background-position: 65% center;
+        background-size: cover;
+    }
+
     .hero-title {
-        font-size: 42px;
+        font-size: 36px;
     }
 
     .hero-subtitle {
         font-size: 18px;
     }
 
-    .section-header h2 {
-        font-size: 36px;
-    }
-
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .diff-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 640px) {
-    section {
-        padding: 60px 0;
-    }
-
-    .hero-title {
-        font-size: 32px;
-    }
-
-    .hero-subtitle {
-        font-size: 16px;
-    }
-
     .hero-cta {
         flex-direction: column;
+        width: 100%;
     }
 
     .btn {
@@ -874,38 +874,164 @@ section {
     }
 
     .section-header h2 {
-        font-size: 28px;
+        font-size: 32px;
+    }
+
+    .section-header p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 60px 0;
     }
 
     .services-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-form {
+        padding: 40px 30px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .diff-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav-container {
+        padding: 12px 20px;
+    }
+
+    .logo-image {
+        height: 35px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .hero {
+        min-height: 100vh;
+        height: auto;
+    }
+
+    .hero::before {
+        background-position: 70% center;
+    }
+
+    .hero-content {
+        padding: 0 20px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px 30px;
+        font-size: 15px;
+    }
+
+    .section-header h2 {
+        font-size: 26px;
+    }
+
+    .section-header p {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .service-card {
+        padding: 35px 25px;
+    }
+
+    .service-card h3 {
+        font-size: 24px;
     }
 
     .form-row {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .contact-form {
         padding: 30px 20px;
     }
 
+    .contact-info {
+        padding: 20px 0;
+    }
+
     .footer-content {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 
     .diff-grid {
         grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .diff-item {
+        padding: 0 15px;
+    }
+
+    .diff-number {
+        font-size: 40px;
     }
 
     .mission-statement {
         font-size: 18px;
+        padding: 0 10px;
     }
 
     .promise-content h2 {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .promise-text p {
-        font-size: 17px;
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .info-item {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .info-item svg {
+        flex-shrink: 0;
+        margin-top: 3px;
     }
 }
